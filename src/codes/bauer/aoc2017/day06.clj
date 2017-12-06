@@ -27,3 +27,9 @@
 ;; part2
 (:iterations (find-cycle (:slots (find-cycle input))))
 ;; => 8038
+
+;; PS. naive solution (above) requires O(:iterations) space for the seen set
+;; A class of pointer algorithms exist that can find the genesis slot and iterations
+;; in O(1) space.
+;; See https://en.wikipedia.org/wiki/Cycle_detection
+;; specifically Floyd's Tortise and Hare, Brent's algorithm
